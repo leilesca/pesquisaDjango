@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>AAAAAAAAAAAA</h1>
+    <h1>Aqui estão as enquetes abertas para serem respondidas:</h1>
+    <ul>
+      {% for pergunta in perguntas %}
+      <li><a href="" pergunta.data }}>- {{ pergunta.texto }} </a></li>
+      {% endfor %}
+    </ul>
+   
+
 </body>
 </html>
