@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,11 +12,9 @@
 <body>
     <h1 class= "main title">Aqui estão as enquetes abertas para serem respondidas:</h1>
     <ul class= "main list">
-      {% for pergunta in perguntas %}
-      <li class= "main listitem"><a href="" pergunta.data }}>- {{ pergunta.texto }} </a></li>
+      {% for item in perguntas %}
+      <li class= "main listitem"><a href="{% url 'responder' item.id %}"> {{ item }} </a></li>
       {% endfor %}
     </ul>
-   
-
 </body>
 </html>
